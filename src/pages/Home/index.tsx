@@ -23,7 +23,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    infos: ['japonesa'],
+    infos: ['Italiana'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -33,7 +33,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    infos: ['japonesa'],
+    infos: ['Italiana'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -43,7 +43,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    infos: ['japonesa'],
+    infos: ['Italiana'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -53,7 +53,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    infos: ['japonesa'],
+    infos: ['Italiana'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -63,7 +63,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    infos: ['japonesa'],
+    infos: ['Italiana'],
     path: '/laDolceVitaTrattoria'
   }
 ]
