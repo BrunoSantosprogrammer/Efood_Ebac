@@ -13,7 +13,7 @@ const restaurants: Restaurants[] = [
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
     assessment: 4.9,
-    category: 'Japonesa',
+    infos: ['Destaque da semana', 'japonesa'],
     path: '/hiokiSushi'
   },
   {
@@ -23,7 +23,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    category: 'Japonesa',
+    infos: ['japonesa'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -33,7 +33,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    category: 'Japonesa',
+    infos: ['japonesa'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -43,7 +43,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    category: 'Japonesa',
+    infos: ['japonesa'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -53,7 +53,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    category: 'Japonesa',
+    infos: ['japonesa'],
     path: '/laDolceVitaTrattoria'
   },
   {
@@ -63,7 +63,7 @@ const restaurants: Restaurants[] = [
     description:
       'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
     assessment: 4.6,
-    category: 'Japonesa',
+    infos: ['japonesa'],
     path: '/laDolceVitaTrattoria'
   }
 ]

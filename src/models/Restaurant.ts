@@ -1,5 +1,5 @@
 class Restaurant {
-  category: string
+  infos: string[]
   title: string
   assessment: number
   description: string
@@ -8,7 +8,7 @@ class Restaurant {
   path: string
 
   constructor(
-    category: string,
+    infos: string[],
     title: string,
     assessment: number,
     description: string,
@@ -16,7 +16,7 @@ class Restaurant {
     id: number,
     path: string
   ) {
-    this.category = category
+    this.infos = infos
     this.title = title
     this.assessment = assessment
     this.description = description

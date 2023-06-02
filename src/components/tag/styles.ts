@@ -12,6 +12,3 @@ export const TagContainer = styled.div`
   margin-right: 8px;
   margin-top: 16px;
 `
-// export const TagDetach = styled(TagContainer)<Props>`
-//   display: ${(props) => (props.detach === 'destaque' ? 'block' : 'none')};
-// `

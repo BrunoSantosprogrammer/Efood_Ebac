@@ -44,3 +44,8 @@ export const Imagem = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `
+export const Infos = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+`

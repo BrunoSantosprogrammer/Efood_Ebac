@@ -13,7 +13,7 @@ const RestaurantsList = ({ restaurants }: Props) => (
         <Restaurant
           key={restaurant.id}
           image={restaurant.Image}
-          category={restaurant.category}
+          infos={restaurant.infos}
           title={restaurant.title}
           assessment={restaurant.assessment}
           description={restaurant.description}
