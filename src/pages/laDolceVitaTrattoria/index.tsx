@@ -1,11 +1,12 @@
 import { HeaderHero } from '../../components/Header'
 import ProductList from '../../components/ProductList'
 
-import pizzaMarguerita from '../../assets/images/marguerita.png'
 import Products from '../../models/Products'
 import Banners from '../../models/Banner'
-import laDulce from '../../assets/images/italiano.png'
 import BannerList from '../../components/BannerList'
+
+import pizzaMarguerita from '../../assets/images/marguerita.png'
+import laDulce from '../../assets/images/italiano.png'
 
 const pizzas: Products[] = [
   {

@@ -63,6 +63,12 @@ const HiokiSushi = () => (
     <div className="container">
       <ProductList items={japonesa} />
     </div>
+    <div>
+      <img src={sushi} alt="Sushi" />
+      <div>
+        <h2>Sushi</h2>
+      </div>
+    </div>
   </div>
 )
 
