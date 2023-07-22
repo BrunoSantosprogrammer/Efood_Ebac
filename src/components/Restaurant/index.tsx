@@ -1,4 +1,4 @@
-import Tag from '../tag'
+import Tag, { TagDestaque } from '../tags'
 import {
   Card,
   CardContainer,
@@ -12,47 +12,57 @@ import Button from '../Button'
 
 export type Props = {
   title: string
-  assessment: number
+  rate: number
   description: string
   image: string
   path: string
-  infos: string[]
+  infos: string
+  emphasis: boolean
 }
 
 const Restaurant = ({
   infos,
   title,
-  assessment,
+  rate,
   description,
   image,
+  emphasis,
   path
-}: Props) => (
-  <CardContainer>
-    <Imagem style={{ backgroundImage: `url(${image})` }}>
-      <Infos>
-        {infos.map((info) => (
-          <Tag key={info}>{info}</Tag>
-        ))}
-      </Infos>
-    </Imagem>
-    <Card>
-      <div>
-        <TitleCard>{title} </TitleCard>
-        <span>
-          {assessment}
-          <img src={stars} alt="Estrela favorita" />
-        </span>
-      </div>
-      <Description>{description}</Description>
-      <Button
-        type="link"
-        title="Clique aqui e saiba mais sobre o restaurante"
-        to={path}
-      >
-        Saiba mais
-      </Button>
-    </Card>
-  </CardContainer>
-)
+}: Props) => {
+  const getDescription = (description: string) => {
+    if (description.length > 260) {
+      return description.slice(0, 260) + '...'
+    }
+    return description
+  }
+
+  return (
+    <CardContainer>
+      <Imagem style={{ backgroundImage: `url(${image})` }}>
+        <Infos>
+          <TagDestaque emphasis={emphasis} />
+          <Tag>{infos}</Tag>
+        </Infos>
+      </Imagem>
+      <Card>
+        <div>
+          <TitleCard>{title} </TitleCard>
+          <span>
+            {rate}
+            <img src={stars} alt="Estrela favorita" />
+          </span>
+        </div>
+        <Description>{getDescription(description)}</Description>
+        <Button
+          type="link"
+          title="Clique aqui e saiba mais sobre o restaurante"
+          to={path}
+        >
+          Saiba mais
+        </Button>
+      </Card>
+    </CardContainer>
+  )
+}
 
 export default Restaurant

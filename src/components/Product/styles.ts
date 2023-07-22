@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(Link)`
   width: 100%;
   padding: 8px;
   margin-bottom: 32px;
   color: ${colors.peachColor};
   background-color: ${colors.redColor};
+  text-decoration: none;
+  display: block;
 
   ${ButtonContainer} {
     width: 100%;

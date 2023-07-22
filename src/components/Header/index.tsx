@@ -21,7 +21,7 @@ export const HeaderHero = () => (
     }}
   >
     <Links className="container">
-      <Link to="/">Restaurantes</Link>
+      <Link to="/efood">Restaurantes</Link>
       <img src={logo} alt="Efood Ebac" />
       <a href="#">0 produtos(s) no carrinho</a>
     </Links>

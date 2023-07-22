@@ -23,6 +23,7 @@ export const ButtonLink = styled(Link)`
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  padding: 4px 6px;
   border: none;
   cursor: pointer;
 `
