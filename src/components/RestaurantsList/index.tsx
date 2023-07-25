@@ -18,7 +18,7 @@ const RestaurantsList = ({ restaurants }: Props) => (
             rate={restaurant.avaliacao}
             description={restaurant.descricao}
             emphasis={restaurant.destacado}
-            path={`/efood/restaurantes/${restaurant.id}`}
+            path={`/restaurantes/${restaurant.id}`}
           />
         </li>
       ))}
