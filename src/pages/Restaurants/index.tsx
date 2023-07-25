@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { HeaderHero } from '../../components/Header'
-import ProductList from '../../components/ProductList'
 
 import Banner from '../../components/Banner'
+import ProductsList from '../../components/ProductList'
 
 export type Products = {
   cardapio: {
@@ -19,15 +19,15 @@ export type Products = {
 
 const Restaurants = () => {
   const { id } = useParams()
-  const [product, setProduct] = useState<Products[]>([])
+  const [products, setProducts] = useState<Products[]>([])
 
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
       .then((res) => res.json())
-      .then((res) => setProduct(res))
+      .then((res) => setProducts(res))
   }, [id])
 
-  if (!product) {
+  if (!products) {
     return <h3>Carregando...</h3>
   }
   return (
@@ -35,7 +35,7 @@ const Restaurants = () => {
       <HeaderHero />
       <Banner />
       <div className="container">
-        <ProductList products={product} />
+        <ProductsList products={products} />
       </div>
     </div>
   )
