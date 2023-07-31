@@ -1,9 +1,9 @@
-import { Products } from '../../pages/Restaurants'
+import { Restaurants } from '../../pages/Home'
 import Product from '../Product'
 import { List } from './styles'
 
 type Props = {
-  products: Products[]
+  products: Restaurants[]
 }
 
 const ProductsList = ({ products }: Props) => (
@@ -24,5 +24,4 @@ const ProductsList = ({ products }: Props) => (
     </List>
   </div>
 )
-
 export default ProductsList

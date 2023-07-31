@@ -5,21 +5,11 @@ import { HeaderHero } from '../../components/Header'
 
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductList'
-
-export type Products = {
-  cardapio: {
-    foto: string
-    id: number
-    preco: number
-    nome: string
-    descricao: string
-    porcao: string
-  }
-}
+import { Restaurants as Restaurantes } from '../Home'
 
 const Restaurants = () => {
   const { id } = useParams()
-  const [products, setProducts] = useState<Products[]>([])
+  const [products, setProducts] = useState<Restaurantes[]>([])
 
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)

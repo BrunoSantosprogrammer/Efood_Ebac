@@ -30,7 +30,7 @@ const Product = ({ title, description, image, id, prices, portion }: Props) => {
 
   return (
     <>
-      <CardContainer to={`/efood/restaurantes/${id}`}>
+      <CardContainer to={`/restaurantes/${id}`}>
         <Imagem style={{ backgroundImage: `url(${image})` }}></Imagem>
         <TitleCard>{title} </TitleCard>
         <Description>{description}</Description>
