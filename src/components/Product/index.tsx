@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import close from '../../assets/images/close.png'
+import { getDescription } from '../Restaurant'
+
 import {
   CardContainer,
   Description,
@@ -10,8 +13,6 @@ import {
 } from './styles'
 import Button from '../Button'
 
-import close from '../../assets/images/close.png'
-
 type Props = {
   title: string
   description: string
@@ -21,7 +22,14 @@ type Props = {
   portion: string
 }
 
-const Product = ({ title, description, image, id, prices, portion }: Props) => {
+const formatPrices = (price: number) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(price)
+}
+
+const Product = ({ title, description, image, prices, portion }: Props) => {
   const [modalOpen, setModalOpen] = useState(false)
 
   const closeModal = () => {
@@ -30,10 +38,10 @@ const Product = ({ title, description, image, id, prices, portion }: Props) => {
 
   return (
     <>
-      <CardContainer to={`/restaurantes/${id}`}>
+      <CardContainer>
         <Imagem style={{ backgroundImage: `url(${image})` }}></Imagem>
         <TitleCard>{title} </TitleCard>
-        <Description>{description}</Description>
+        <Description>{getDescription(description)}</Description>
         <Button
           type="button"
           title="Clique para saber mais detalhes"
@@ -54,16 +62,14 @@ const Product = ({ title, description, image, id, prices, portion }: Props) => {
               }}
             />
             <h3>{title}</h3>
-            <p>
-              {description}
-              <br />
-              <br />
-              <br />
-            </p>
+            <p>{description}</p>
             <p>{portion}</p>
-            <Button type="button" title={'Adicionar ao carrinho'}>
-              <h4>Adicionar ao carrinho - {prices}</h4>
-            </Button>
+            <div>
+              <Button type="button" title={'Adicionar ao carrinho'}>
+                Adicionar ao carrinho -
+              </Button>
+              <span>{formatPrices(prices)}</span>
+            </div>
           </div>
         </ModalContainer>
         <div

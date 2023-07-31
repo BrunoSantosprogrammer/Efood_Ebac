@@ -9,7 +9,7 @@ import { Restaurants as Restaurantes } from '../Home'
 
 const Restaurants = () => {
   const { id } = useParams()
-  const [products, setProducts] = useState<Restaurantes[]>([])
+  const [products, setProducts] = useState<Restaurantes>()
 
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)

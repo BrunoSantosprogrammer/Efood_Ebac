@@ -20,6 +20,12 @@ export type Props = {
   emphasis: boolean
 }
 
+export const getDescription = (description: string) => {
+  if (description.length > 260) {
+    return description.slice(0, 260) + '...'
+  }
+  return description
+}
 const Restaurant = ({
   infos,
   title,
@@ -29,13 +35,6 @@ const Restaurant = ({
   emphasis,
   path
 }: Props) => {
-  const getDescription = (description: string) => {
-    if (description.length > 260) {
-      return description.slice(0, 260) + '...'
-    }
-    return description
-  }
-
   return (
     <CardContainer>
       <Imagem style={{ backgroundImage: `url(${image})` }}>

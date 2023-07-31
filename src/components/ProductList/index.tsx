@@ -3,21 +3,21 @@ import Product from '../Product'
 import { List } from './styles'
 
 type Props = {
-  products: Restaurants[]
+  products: Restaurants
 }
 
 const ProductsList = ({ products }: Props) => (
   <div>
     <List>
-      {products.map((product) => (
-        <li key={product.cardapio.id}>
+      {products.cardapio.map((plate) => (
+        <li key={plate.id}>
           <Product
-            id={product.cardapio.id}
-            image={product.cardapio.foto}
-            title={product.cardapio.nome}
-            description={product.cardapio.descricao}
-            prices={product.cardapio.preco}
-            portion={product.cardapio.porcao}
+            id={plate.id}
+            image={plate.foto}
+            title={plate.nome}
+            description={plate.descricao}
+            prices={plate.preco}
+            portion={plate.porcao}
           />
         </li>
       ))}

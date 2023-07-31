@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
-export const CardContainer = styled(Link)`
+export const CardContainer = styled.div`
   width: 100%;
   padding: 8px;
   margin-bottom: 32px;
@@ -29,11 +28,11 @@ export const TitleCard = styled.h3`
   margin-top: 8px;
 `
 export const Description = styled.p`
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   padding: 8px 0;
-  width: 304px;
 `
 export const Imagem = styled.div`
   width: 100%;
@@ -84,7 +83,11 @@ export const ModalContainer = styled.div`
   p {
     font-size: 14px;
     margin: 16px 0;
-    width: 656px;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      width: 80%;
+    }
   }
 
   > img {
@@ -101,7 +104,16 @@ export const ModalContainer = styled.div`
       right: 0;
       margin-top: 8px;
       margin-right: 8px;
+      cursor: pointer;
     }
+  }
+
+  span {
+    color: ${colors.redColor};
+    background-color: ${colors.peachColor};
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   ${ButtonContainer} {
@@ -110,6 +122,12 @@ export const ModalContainer = styled.div`
     color: ${colors.redColor};
     background-color: ${colors.peachColor};
     font-size: 14px;
-    padding: 4px 8px;
+    padding: 4px 0 4px 8px;
+  }
+
+  @media (max-width: 767px) {
+    width: 80%;
+    height: 80%;
+    display: block;
   }
 `

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Header from '../../components/Header'
 import RestaurantsList from '../../components/RestaurantsList'
 
-type Cardapio = {
+export type Cardapio = {
   foto: string
   id: number
   preco: number
