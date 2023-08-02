@@ -31,7 +31,7 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  padding: 8px 0;
+  margin: 8px 0;
 `
 export const Imagem = styled.div`
   height: 167px;

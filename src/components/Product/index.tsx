@@ -38,8 +38,8 @@ const Product = ({ title, description, image, prices, portion }: Props) => {
   }
 
   const getDescriptionProduct = (description: string) => {
-    if (description.length > 129) {
-      return description.slice(0, 129) + '...'
+    if (description.length > 147) {
+      return description.slice(0, 147) + '...'
     }
     return description
   }
