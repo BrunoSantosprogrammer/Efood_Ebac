@@ -2,30 +2,38 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const CardContainer = styled.div`
-  padding-bottom: 48px;
+  max-width: 472px;
+  max-height: 398px;
 `
 
 export const Card = styled.div`
+  width: 100%;
+  height: 100%;
   color: ${colors.redColor};
   font-weight: 700;
   border: 1px solid ${colors.redColor};
-  padding: 8px;
   background-color: ${colors.whiteBackground};
-  width: 100%;
+  padding: 8px;
 
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
 
-    img {
+    span {
+      width: 55px;
+      height: 22px;
+      display: flex;
+      aligin-items: center;
       margin-left: 8px;
-      height: 20px;
+      font-size: 18px;
+      column-gap: 8px;
     }
   }
 `
 export const TitleCard = styled.h3`
+  font-size: 18px;
+  font-weight: 700;
   line-height: 20px;
 `
 export const Description = styled.p`
@@ -33,7 +41,6 @@ export const Description = styled.p`
   font-weight: 400;
   line-height: 22px;
   padding: 16px 0;
-  width: 100%;
 `
 export const Imagem = styled.div`
   position: relative;

@@ -32,6 +32,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((res) => setRestaurants(res))
   }, [])
+
   if (!restaurants) {
     return <h3>Carregando...</h3>
   }

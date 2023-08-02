@@ -7,7 +7,7 @@ type Props = {
 }
 
 const RestaurantsList = ({ restaurants }: Props) => (
-  <div>
+  <div className="container">
     <List>
       {restaurants.map((restaurant) => (
         <li key={restaurant.id}>

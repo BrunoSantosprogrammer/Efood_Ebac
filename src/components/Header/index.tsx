@@ -1,10 +1,10 @@
 import { HeaderBar, Links } from './style'
 import logo from '../../assets/images/logo.png'
-import backgroundImgHero from '../../assets/images//Vector.png'
+import backgroundImgHeader from '../../assets/images//Vector.png'
 import { Link } from 'react-router-dom'
 
 const Header = () => (
-  <HeaderBar style={{ backgroundImage: `url(${backgroundImgHero})` }}>
+  <HeaderBar style={{ backgroundImage: `url(${backgroundImgHeader})` }}>
     <img src={logo} alt="Efood Ebac" />
     <p>
       Viva experiências gastronômicas <br /> no conforto da sua casa
@@ -17,7 +17,7 @@ export default Header
 export const HeaderHero = () => (
   <HeaderBar
     style={{
-      backgroundImage: `url(${backgroundImgHero})`
+      backgroundImage: `url(${backgroundImgHeader})`
     }}
   >
     <Links className="container">

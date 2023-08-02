@@ -3,6 +3,7 @@ import { colors } from '../../styles'
 import { Props } from '.'
 
 export const TagContainer = styled.div`
+  height: 26px;
   background-color: ${colors.redColor};
   color: ${colors.peachColor};
   font-size: 14px;

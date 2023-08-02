@@ -2,12 +2,17 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const HeaderBar = styled.div`
+  height: 384px;
   padding: 40px 0;
-  text-align: center;
-  display: block;
   background-repeat: no-repeat;
   background-size: cover;
   color: ${colors.redColor};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 80px;
 
   img {
     width: 126px;
@@ -15,8 +20,7 @@ export const HeaderBar = styled.div`
   }
 
   p {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    max-width: 539px;
     height: 84px;
     font-weight: 900;
     font-size: 36px;

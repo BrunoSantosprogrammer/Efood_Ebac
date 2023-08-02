@@ -6,6 +6,7 @@ import { HeaderHero } from '../../components/Header'
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductList'
 import { Restaurants as Restaurantes } from '../Home'
+import { ContainerProducts } from './styles'
 
 const Restaurants = () => {
   const { id } = useParams()
@@ -20,14 +21,15 @@ const Restaurants = () => {
   if (!products) {
     return <h3>Carregando...</h3>
   }
+
   return (
-    <div>
+    <ContainerProducts>
       <HeaderHero />
       <Banner />
       <div className="container">
         <ProductsList products={products} />
       </div>
-    </div>
+    </ContainerProducts>
   )
 }
 

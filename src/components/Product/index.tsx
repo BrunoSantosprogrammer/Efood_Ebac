@@ -1,14 +1,15 @@
 import { useState } from 'react'
 
 import close from '../../assets/images/close.png'
-import { getDescription } from '../Restaurant'
 
 import {
+  BtnModalContainer,
   CardContainer,
   Description,
   Imagem,
   Modal,
   ModalContainer,
+  ModalDescription,
   TitleCard
 } from './styles'
 import Button from '../Button'
@@ -36,22 +37,29 @@ const Product = ({ title, description, image, prices, portion }: Props) => {
     setModalOpen(false)
   }
 
+  const getDescriptionProduct = (description: string) => {
+    if (description.length > 129) {
+      return description.slice(0, 129) + '...'
+    }
+    return description
+  }
+
   return (
     <>
-      <CardContainer>
+      <CardContainer className="container">
         <Imagem style={{ backgroundImage: `url(${image})` }}></Imagem>
         <TitleCard>{title} </TitleCard>
-        <Description>{getDescription(description)}</Description>
+        <Description>{getDescriptionProduct(description)}</Description>
         <Button
           type="button"
-          title="Clique para saber mais detalhes"
+          title="Clique para adicionar ao carrinho"
           onClick={() => setModalOpen(true)}
         >
-          <h4>Mais detalhes</h4>
+          <h4>Adicionar ao carrinho</h4>
         </Button>
       </CardContainer>
       <Modal className={modalOpen ? 'isVisible' : ''}>
-        <ModalContainer>
+        <ModalContainer className="container">
           <img src={image} alt={title} />
           <div>
             <img
@@ -62,14 +70,17 @@ const Product = ({ title, description, image, prices, portion }: Props) => {
               }}
             />
             <h3>{title}</h3>
-            <p>{description}</p>
-            <p>{portion}</p>
-            <div>
+            <ModalDescription>
+              <p>{description}</p>
+              <br /> <br />
+              <p>{portion}</p>
+            </ModalDescription>
+            <BtnModalContainer>
               <Button type="button" title={'Adicionar ao carrinho'}>
                 Adicionar ao carrinho -
               </Button>
               <span>{formatPrices(prices)}</span>
-            </div>
+            </BtnModalContainer>
           </div>
         </ModalContainer>
         <div

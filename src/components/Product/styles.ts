@@ -3,9 +3,9 @@ import { colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const CardContainer = styled.div`
-  width: 100%;
+  width: 320px;
+  height: 338px;
   padding: 8px;
-  margin-bottom: 32px;
   color: ${colors.peachColor};
   background-color: ${colors.redColor};
   text-decoration: none;
@@ -21,22 +21,20 @@ export const CardContainer = styled.div`
     padding: 4px 0;
   }
 `
-
 export const TitleCard = styled.h3`
   font-size: 16px;
+  font-weight: 900;
   line-height: 18px;
   margin-top: 8px;
 `
 export const Description = styled.p`
-  width: 100%;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   padding: 8px 0;
 `
 export const Imagem = styled.div`
-  width: 100%;
-  height: 218px;
+  height: 167px;
   background-repeat: no-repeat;
   background-size: cover;
 `
@@ -67,8 +65,7 @@ export const Modal = styled.div`
 `
 export const ModalContainer = styled.div`
   width: 100%;
-  height: 344px;
-  margin: 0 120px;
+  max-height: 344px;
   display: flex;
   color: ${colors.whitePrimary};
   background-color: ${colors.redColor};
@@ -78,12 +75,14 @@ export const ModalContainer = styled.div`
 
   h3 {
     font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
   }
 
   p {
     font-size: 14px;
-    margin: 16px 0;
-    width: 100%;
+    font-weight: 400;
+    line-height: 22px;
 
     @media (max-width: 767px) {
       width: 80%;
@@ -108,26 +107,31 @@ export const ModalContainer = styled.div`
     }
   }
 
-  span {
-    color: ${colors.redColor};
-    background-color: ${colors.peachColor};
-    padding: 4px 8px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  ${ButtonContainer} {
-    width: 280px;
-    heigth: 24px;
-    color: ${colors.redColor};
-    background-color: ${colors.peachColor};
-    font-size: 14px;
-    padding: 4px 0 4px 8px;
-  }
-
   @media (max-width: 767px) {
     width: 80%;
     height: 80%;
     display: block;
+  }
+`
+export const ModalDescription = styled.div`
+  width: 100%;
+  height: 176px;
+  margin: 16px 0;
+`
+export const BtnModalContainer = styled.div`
+  width: 218px;
+  heigth: 24px;
+  color: ${colors.redColor};
+  background-color: ${colors.peachColor};
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 4px 6px;
+  cursor: pointer;
+
+  > ${ButtonContainer} {
+    color: ${colors.redColor};
+    background-color: ${colors.peachColor};
+    margin-right: 4px;
   }
 `

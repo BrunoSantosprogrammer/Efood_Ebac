@@ -20,12 +20,13 @@ export type Props = {
   emphasis: boolean
 }
 
-export const getDescription = (description: string) => {
-  if (description.length > 260) {
-    return description.slice(0, 260) + '...'
+const getDescriptionRestaurant = (description: string) => {
+  if (description.length > 245) {
+    return description.slice(0, 245) + '...'
   }
   return description
 }
+
 const Restaurant = ({
   infos,
   title,
@@ -51,7 +52,7 @@ const Restaurant = ({
             <img src={stars} alt="Estrela favorita" />
           </span>
         </div>
-        <Description>{getDescription(description)}</Description>
+        <Description>{getDescriptionRestaurant(description)}</Description>
         <Button
           type="link"
           title="Clique aqui e saiba mais sobre o restaurante"
