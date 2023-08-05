@@ -9,6 +9,7 @@ import {
 } from './styles'
 import stars from '../../assets/images/estrelaFavorita.png'
 import Button from '../Button'
+import { capitalizeFirst } from '../Banner'
 
 export type Props = {
   title: string
@@ -41,7 +42,7 @@ const Restaurant = ({
       <Imagem style={{ backgroundImage: `url(${image})` }}>
         <Infos>
           <TagDestaque emphasis={emphasis} />
-          <Tag>{infos}</Tag>
+          <Tag>{capitalizeFirst(infos)}</Tag>
         </Infos>
       </Imagem>
       <Card>

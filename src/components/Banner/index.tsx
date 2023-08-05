@@ -3,6 +3,11 @@ import { useParams } from 'react-router-dom'
 import { Restaurants } from '../../pages/Home'
 import { HeroContent, Imagem } from './styles'
 
+export const capitalizeFirst = (str: string) => {
+  const first = str[0].toUpperCase() + str.slice(1)
+  return first
+}
+
 const Banner = () => {
   const { id } = useParams()
   const [restaurants, setRestaurants] = useState<Restaurants>()
@@ -20,7 +25,7 @@ const Banner = () => {
       <Imagem style={{ backgroundImage: `url(${restaurants.capa})` }}>
         <HeroContent>
           <div className="container">
-            <h3>{restaurants.tipo}</h3>
+            <h3>{capitalizeFirst(restaurants.tipo)}</h3>
             <h2>{restaurants.titulo}</h2>
           </div>
         </HeroContent>

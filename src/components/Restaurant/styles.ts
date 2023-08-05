@@ -40,7 +40,7 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  padding: 16px 0;
+  margin: 16px 0;
 `
 export const Imagem = styled.div`
   position: relative;

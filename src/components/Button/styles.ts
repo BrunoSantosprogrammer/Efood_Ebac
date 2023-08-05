@@ -18,6 +18,7 @@ export const ButtonContainer = styled.a`
 export const ButtonLink = styled(Link)`
   width: 82px;
   height: 24px;
+  display: block;
   background-color: ${colors.redColor};
   color: ${colors.peachColor};
   font-size: 14px;
