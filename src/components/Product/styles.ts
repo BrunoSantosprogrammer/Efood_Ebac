@@ -91,7 +91,7 @@ export const ModalContainer = styled.div`
 
   > img {
     width: 280px;
-    heigth: 280px;
+    height: 280px;
     object-fit: fill;
     margin-right: 24px;
   }
@@ -120,7 +120,8 @@ export const ModalDescription = styled.div`
 `
 export const BtnModalContainer = styled.div`
   width: 218px;
-  heigth: 24px;
+  height: 24px;
+  display: inline-block;
   color: ${colors.redColor};
   background-color: ${colors.peachColor};
   font-size: 14px;
@@ -130,8 +131,6 @@ export const BtnModalContainer = styled.div`
   cursor: pointer;
 
   > ${ButtonContainer} {
-    color: ${colors.redColor};
-    background-color: ${colors.peachColor};
     margin-right: 4px;
   }
 `
