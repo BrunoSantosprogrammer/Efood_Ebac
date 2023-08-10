@@ -27,7 +27,7 @@ type Props = {
   portion: string
 }
 
-const formatPrices = (price: number) => {
+export const formatPrices = (price: number) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL'
@@ -41,7 +41,6 @@ const Product = ({ title, description, image, prices, portion }: Props) => {
   const dispatch = useDispatch()
 
   const addProduct = () => {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     dispatch(add(data!))
     dispatch(open())
   }
