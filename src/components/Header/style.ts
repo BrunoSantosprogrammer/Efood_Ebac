@@ -40,3 +40,6 @@ export const Links = styled.ul`
     font-weight: 900;
   }
 `
+export const CartButton = styled.a`
+  cursor: pointer;
+`

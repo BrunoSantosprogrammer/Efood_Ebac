@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 import close from '../../assets/images/close.png'
+import { add, open } from '../../store/reducers/cart'
 
 import {
   BtnModalContainer,
@@ -13,6 +15,8 @@ import {
   TitleCard
 } from './styles'
 import Button from '../Button'
+import { useGetProductsQuery } from '../../services/api'
+import { useParams } from 'react-router-dom'
 
 type Props = {
   title: string
@@ -31,7 +35,16 @@ const formatPrices = (price: number) => {
 }
 
 const Product = ({ title, description, image, prices, portion }: Props) => {
+  const { id } = useParams()
+  const { data } = useGetProductsQuery(id!)
   const [modalOpen, setModalOpen] = useState(false)
+  const dispatch = useDispatch()
+
+  const addProduct = () => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    dispatch(add(data!))
+    dispatch(open())
+  }
 
   const closeModal = () => {
     setModalOpen(false)
@@ -76,7 +89,11 @@ const Product = ({ title, description, image, prices, portion }: Props) => {
               <p>{portion}</p>
             </ModalDescription>
             <BtnModalContainer>
-              <Button type="button" title={'Adicionar ao carrinho'}>
+              <Button
+                type="button"
+                title={'Adicionar ao carrinho'}
+                onClick={addProduct}
+              >
                 Adicionar ao carrinho -
               </Button>
               <span>{formatPrices(prices)}</span>

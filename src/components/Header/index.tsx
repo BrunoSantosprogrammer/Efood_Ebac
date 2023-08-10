@@ -1,29 +1,46 @@
-import { HeaderBar, Links } from './style'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { open } from '../../store/reducers/cart'
+
 import logo from '../../assets/images/logo.png'
 import backgroundImgHeader from '../../assets/images//Vector.png'
-import { Link } from 'react-router-dom'
+
+import * as S from './style'
+import { RootReducer } from '../../store'
 
 const Header = () => (
-  <HeaderBar style={{ backgroundImage: `url(${backgroundImgHeader})` }}>
+  <S.HeaderBar style={{ backgroundImage: `url(${backgroundImgHeader})` }}>
     <img src={logo} alt="Efood Ebac" />
     <p>
       Viva experiências gastronômicas <br /> no conforto da sua casa
     </p>
-  </HeaderBar>
+  </S.HeaderBar>
 )
 
 export default Header
 
-export const HeaderHero = () => (
-  <HeaderBar
-    style={{
-      backgroundImage: `url(${backgroundImgHeader})`
-    }}
-  >
-    <Links className="container">
-      <Link to="/">Restaurantes</Link>
-      <img src={logo} alt="Efood Ebac" />
-      <a href="#">0 produtos(s) no carrinho</a>
-    </Links>
-  </HeaderBar>
-)
+export const HeaderHero = () => {
+  const { items } = useSelector((state: RootReducer) => state.cart)
+  const dispatch = useDispatch()
+
+  const openCart = () => {
+    dispatch(open())
+  }
+
+  return (
+    <S.HeaderBar
+      style={{
+        backgroundImage: `url(${backgroundImgHeader})`
+      }}
+    >
+      <S.Links className="container">
+        <Link to="/">Restaurantes</Link>
+        <img src={logo} alt="Efood Ebac" />
+        <S.CartButton onClick={openCart}>
+          {items.length} produtos(s) no carrinho
+        </S.CartButton>
+      </S.Links>
+    </S.HeaderBar>
+  )
+}
