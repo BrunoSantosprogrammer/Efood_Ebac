@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const CardContainer = styled.div`
-  width: 320px;
+  max-width: 320px;
   height: 338px;
   padding: 8px;
   color: ${colors.peachColor};
@@ -73,6 +73,13 @@ export const ModalContainer = styled.div`
   position: relative;
   z-index: 1;
 
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    max-height: 90%;
+    display: block;
+    padding: 8px;
+  }
+
   h3 {
     font-size: 18px;
     font-weight: 900;
@@ -83,10 +90,6 @@ export const ModalContainer = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-
-    @media (max-width: 767px) {
-      width: 80%;
-    }
   }
 
   > img {
@@ -94,6 +97,12 @@ export const ModalContainer = styled.div`
     height: 280px;
     object-fit: fill;
     margin-right: 24px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 100%;
+      height: 150px;
+      margin-right: 0;
+    }
   }
 
   div {
@@ -104,19 +113,23 @@ export const ModalContainer = styled.div`
       margin-top: 8px;
       margin-right: 8px;
       cursor: pointer;
-    }
-  }
 
-  @media (max-width: 767px) {
-    width: 80%;
-    height: 80%;
-    display: block;
+      @media (max-width: ${breakpoints.tablet}) {
+        background-color: #000;
+        border: 1px solid #fff;
+        opacity: 0.7;
+      }
+    }
   }
 `
 export const ModalDescription = styled.div`
   width: 100%;
-  height: 176px;
+  max-height: 176px;
   margin: 16px 0;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-height: 100%;
+  }
 `
 export const BtnModalContainer = styled.div`
   width: 218px;
@@ -132,5 +145,9 @@ export const BtnModalContainer = styled.div`
 
   > ${ButtonContainer} {
     margin-right: 4px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
   }
 `

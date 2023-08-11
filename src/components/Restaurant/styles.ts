@@ -1,9 +1,13 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const CardContainer = styled.div`
   max-width: 472px;
   max-height: 398px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-height: 100%;
+  }
 `
 
 export const Card = styled.div`
@@ -24,7 +28,7 @@ export const Card = styled.div`
       width: 55px;
       height: 22px;
       display: flex;
-      aligin-items: center;
+      align-items: center;
       margin-left: 8px;
       font-size: 18px;
       column-gap: 8px;

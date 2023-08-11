@@ -36,7 +36,7 @@ const Cart = () => {
         <S.CartLists>
           {products?.cardapio.map((product) => (
             <S.List key={product.id}>
-              <img src={product.foto} alt=" " />
+              <img src={product.foto} alt={product.nome} />
               <div>
                 <h3>{product.nome}</h3>
                 <span>{product.preco}</span>

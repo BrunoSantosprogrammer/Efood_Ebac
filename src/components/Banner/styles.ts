@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Imagem = styled.div`
   max-width: 100%;
@@ -32,5 +32,9 @@ export const HeroContent = styled.div`
     h2 {
       font-weight: 900;
     }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 24px;
   }
 `

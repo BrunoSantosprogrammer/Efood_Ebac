@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const HeaderBar = styled.div`
   height: 384px;
@@ -25,6 +25,16 @@ export const HeaderBar = styled.div`
     font-weight: 900;
     font-size: 36px;
     line-height: 42px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 100%;
+    margin-bottom: 60px;
   }
 `
 
@@ -42,4 +52,7 @@ export const Links = styled.ul`
 `
 export const CartButton = styled.a`
   cursor: pointer;
+
+  @media (max-width: ${breakpoints.tablet}) {
+  }
 `

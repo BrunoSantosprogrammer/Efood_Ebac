@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const FooterSection = styled.footer`
   background-color: ${colors.peachColor};
-  width:100%
+  width: 100%;
   height: 298px;
   padding: 40px 0;
   display: flex;
@@ -16,6 +16,11 @@ export const FooterSection = styled.footer`
     width: 125px;
     height: 58px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 100%;
+    margin-top: 60px;
+  }
 `
 export const Links = styled.ul`
   padding-top: 32px;
@@ -24,6 +29,10 @@ export const Links = styled.ul`
   .facebook {
     margin-right: 8px;
     margin-left: 8px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding-bottom: 40px;
   }
 `
 export const LinkItem = styled.a`
@@ -35,10 +44,10 @@ export const LinkItem = styled.a`
   }
 `
 export const Description = styled.p`
-  width: 480px;
+  max-width: 480px;
   color: ${colors.redColor};
   font-size: 10px;
   font-weight: 400;
   text-align: center;
-  line-weight: 12px;
+  line-height: 12px;
 `

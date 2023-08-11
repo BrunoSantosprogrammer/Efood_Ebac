@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import bin from '../../assets/images/bin.png'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const Overlay = styled.div`
@@ -41,6 +41,10 @@ export const Sidebar = styled.aside`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 80%;
   }
 `
 export const CartLists = styled.ul`
