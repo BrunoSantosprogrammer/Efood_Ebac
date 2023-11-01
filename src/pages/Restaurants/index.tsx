@@ -10,7 +10,7 @@ import { useGetProductsQuery } from '../../services/api'
 const Restaurants = () => {
   const { id } = useParams()
 
-  const { data: products } = useGetProductsQuery(id!)
+  const { data: products } = useGetProductsQuery(id ?? '')
 
   if (!products) {
     return <h3>Carregando...</h3>

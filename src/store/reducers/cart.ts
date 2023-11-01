@@ -16,9 +16,9 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action: PayloadAction<Restaurants>) => {
-      const item = state.items.find((item) => item.id === action.payload.id)
+      const products = state.items.find((item) => item.cardapio)
 
-      if (!item) {
+      if (!products) {
         state.items.push(action.payload)
       } else {
         alert('Item já adicionado ao carrinho')
@@ -27,7 +27,6 @@ const cartSlice = createSlice({
     remove: (state, action: PayloadAction<number>) => {
       state.items = state.items.filter((item) => item.id !== action.payload)
     },
-
     open: (state) => {
       state.isOpen = true
     },

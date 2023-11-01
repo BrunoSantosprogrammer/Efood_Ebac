@@ -22,7 +22,7 @@ export const CartContainer = styled.div`
   justify-content: flex-end;
   z-index: 1;
 
-  &.isOpen {
+  &.is-open {
     display: flex;
   }
 `
